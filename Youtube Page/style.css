@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(15, 15, 15);
+}
+
+.videos_container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(240px,300px),1fr));
+    gap:2rem 1rem;
+    margin-top:5.5rem;
+    margin-right:1.6rem;
+    margin-left:6.2rem;
+    margin-bottom:3rem;
+    justify-content: center;
+    z-index:0;
+}
+
+.video_thumbnail_container{
+    margin-bottom:0.4rem;
+    position:relative;
+}
+
+.vid_time_display{
+    position:absolute;
+    inset :auto 4px 8px auto;
+    background-color: rgba(0,0,0,0.7);
+    color:white;
+    font-size:0.84rem;
+    font-weight:500;
+    padding:0.12rem 0.25rem;
+    padding-bottom:0.14rem;
+    border-radius:0.2rem;
+}
+
+.video_thumbnail{
+    width:100%;
+    border-radius: 0.6rem;
+}
+
+.video_details_container{
+    display:flex;
+}
+
+.channel_logo{
+    display:block;
+    border-radius: 50%;
+    width: 2.5rem;
+    height:2.5rem;
+}
+
+.video_description_container{
+    flex:1;
+    padding-left:0.6rem;
+}
+
+.channel_name{
+    margin-top:0.5rem;
+}
+
+.video_title{
+    color:white;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    font-size:0.9rem;
+    font-weight:500;
+    line-height: 1.4rem;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.channel_name{margin-bottom:0.17rem;}
+
+.channel_name,
+.video_performance{
+    color:rgb(170,170,170);
+    font-size:0.8rem;
+    word-wrap: break-word;
+}
+
+
+
+@media (max-width:660px){
+    .videos_container{
+        grid-template-columns: 1fr 1fr;
+    }  
+}
+
+@media (max-width:550px){
+    .videos_container{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (min-width:1400px){
+    .videos_container{
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));;
+    }
+}
+
+@media (min-width:1650px){
+    .channel_name,
+    .video_performance{
+        font-size:0.85rem;
+    }
+
+    .video_title{
+        font-size:.95rem;
+    }
+
+    .video_thumbnail_container{
+        margin-bottom:0.45rem;
+    }
+}
