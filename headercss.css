@@ -275,7 +275,7 @@
     cursor:pointer;
 }
 
-@media (max-width:640px){
+@media (max-width:660px){
     .middle_section{
         display:none;
     }

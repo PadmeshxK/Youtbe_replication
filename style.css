@@ -93,13 +93,14 @@ body{
     }  
 }
 
-@media (max-width:550px){
+@media (max-width:600px){
     .videos_container{
         grid-template-columns:1fr;
     }
+
 }
 
-@media (min-width:1400px){
+@media (min-width:1313px){
     .videos_container{
         grid-template-columns: repeat(auto-fit,minmax(300px,1fr));;
     }
