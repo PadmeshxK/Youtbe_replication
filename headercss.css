@@ -59,6 +59,15 @@
     cursor:pointer;
 }
 
+.youtube_phone_logo{
+    width:2rem;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-left:1.1rem;
+    cursor:pointer;
+    display:none;
+}
+
 /*middle section*/
 
 .middle_section{
@@ -310,5 +319,24 @@
     .youtube_header{
         gap:1rem;
         overflow: visible;
+    }
+
+
+    .youtube_logo,
+    .ham_left_section .youtube_phone_logo{
+        display:none;
+    }
+    
+    .youtube_phone_logo,
+    .ham_left_section .youtube_logo{
+        display:block;
+    }
+    
+    .left_section{
+        margin-left:0.5rem;
+    }
+    .right_section{
+        margin-right:0.95rem;
+        flex-shrink: 1;
     }
 }

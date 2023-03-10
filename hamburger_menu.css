@@ -30,6 +30,31 @@
     padding-top:0.2rem;
     align-items: flex-start;
     background-color: rgb(15, 15, 15);
+    overflow:hidden;
+    overflow-y: scroll;
+}
+
+.ham_wrapper::-webkit-scrollbar{
+    background:transparent;
+    width:0;
+}
+
+.ham_wrapper:hover::-webkit-scrollbar{
+      width:0.45rem;
+}
+
+.ham_wrapper:hover::-webkit-scrollbar-thumb{
+    background:rgb(112, 112, 112);
+    border-radius:20rem;
+}
+
+@media (hover: none){
+    .ham_wrapper::-webkit-scrollbar{
+        width:0.45rem;
+    }
+    .ham_wrapper::-webkit-scrollbar-thumb{
+        background-color: rgb(112,112,112);
+    }
 }
 
 .ham_left_section,
@@ -48,7 +73,7 @@
     background-color: transparent;
     color:white;
     font-family:Roboto,sans-serif;
-    overflow-y:scroll;
+    overflow:visible;
 }
 
 .hamburger_menu_container .left_section{
@@ -152,12 +177,12 @@
 .ending{
     margin-left:1.45rem;
     margin-top:0.7rem;
-    margin-bottom:1.2rem;
 }
 
 .ending .line{
     color:rgb(109, 111, 113);
     font-size:0.8rem;
+    margin-bottom:1.2rem;
 }
 
 .black_background{
@@ -170,13 +195,4 @@
 }
 
 /*scroll bar*/
-.hamburger_menu_container::-webkit-scrollbar{
-    width:0.6rem;
-    margin-right:0.2rem;
-}
-
-.hamburger_menu_container::-webkit-scrollbar-thumb{
-    background:rgb(148, 148, 148);
-    border-radius:20rem;
-}
 
