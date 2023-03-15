@@ -29,6 +29,10 @@
     margin-top:2rem;
 }
 
+.left_icon_container{
+    outline-offset:-1px;
+}
+
 .icon{
     width:1.2rem;
     height:1.2rem;

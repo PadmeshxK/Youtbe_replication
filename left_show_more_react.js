@@ -41,7 +41,6 @@ show_more.onclick = function(){
 
 const parent_element_2 = document.querySelector('.ham_wrapper .section_2')
 const show_more_1 = document.querySelector('.ham_wrapper .section_2 .left_icon_container:last-child')
-console.log(show_more_1)
 show_more_1.onclick = function(){
     show_more_1.remove()
     const temp_div = show_more_1.cloneNode(true)
