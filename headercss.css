@@ -284,8 +284,13 @@
     cursor:pointer;
 }
 
-@keyframes outering{
+@keyframes outering_icon{
     0% {outline:solid 1.5px rgb(102, 102, 102);}
+    100% {outline:solid 1.5px rgb(15, 15, 15);}
+}
+
+@keyframes videoring{
+    0% {outline:solid 1.5px rgb(58, 58, 58);}
     100% {outline:solid 1.5px rgb(15, 15, 15);}
 }
 

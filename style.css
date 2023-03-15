@@ -92,7 +92,9 @@ body{
     position:relative;
     cursor:pointer;
     transition: background-color 200ms;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
+    padding:0.2rem;
+    padding-bottom:0.4rem;
 }
 
 .video_container:active{
@@ -155,7 +157,7 @@ body{
     }  
 }
 
-@media (max-width:600px){
+@media (max-width:620px){
     .videos_container{
         grid-template-columns:1fr;
     }
