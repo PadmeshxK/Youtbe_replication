@@ -6,6 +6,18 @@
     font-family: Roboto,Arial, Helvetica, sans-serif;
 }
 
+.noSelect{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus{
+    outline:none !important;
+}
 body{
     background-color: rgb(15, 15, 15);
 }
@@ -20,6 +32,7 @@ body{
     margin-bottom:3rem;
     justify-content: center;
     z-index:0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .video_thumbnail_container{
