@@ -186,7 +186,8 @@ body{
     display:flex;
     white-space: nowrap;
     top:0;
-    left:0;
+    left:1px;
+    padding-right:1px;
     font-size:0.8rem;
     color:white;
     background:black;
@@ -202,10 +203,6 @@ body{
     opacity 250ms;
 }
 
-.add_playlist_popup .hover_popup{
-    left:1px;
-    padding-right:1px;
-}
 .watch_later_popup:hover .background,
 .watch_later_popup:hover .hover_popup,
 .add_playlist_popup:hover .background,
