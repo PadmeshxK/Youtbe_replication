@@ -8,9 +8,11 @@ const video_grid = document.querySelector('.videos_container');
 
 function ham_media_query(){
     let query1 = window.matchMedia("(max-width: 1312px)");
-    let query2 = window.matchMedia("(max-width:550px)");
+    let query2 = window.matchMedia("(max-width:820px)");
+    let query3 = window.matchMedia("(max-width:550px)");
     if (query1.matches){
         video_grid.style.marginLeft = '6.2rem';
+        video_grid.style.marginRight = '2rem';
         left_section.style.display = 'flex';
         ham_menu.style.transform = 'translateX(-15rem)';
         ham_button_before.onclick = function(){
@@ -67,6 +69,11 @@ function ham_media_query(){
         left_section.style.display = 'none';
         video_grid.style.marginLeft = '2rem';
         video_grid.style.marginRight = '2rem';
+    }
+
+    if (query3.matches){
+        video_grid.style.marginLeft = '5rem'
+        video_grid.style.marginRight = '5rem'
     }
 }
 

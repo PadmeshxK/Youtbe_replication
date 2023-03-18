@@ -95,6 +95,7 @@ body{
     border-radius: 0.2rem;
     padding:0.2rem;
     padding-bottom:0.4rem;
+    overflow:hidden;
 }
 
 .video_container:active{
@@ -115,18 +116,20 @@ body{
     position:absolute;
     opacity:0;
     transition:opacity 50ms ease-out;
+    clip-path: inset( -100vw 0 -100vw -100vw );
 }
 
 .watch_later_popup,
 .add_playlist_popup{
-    background:rgba(0, 0, 0, 0.87);
-    padding:0.3rem;
+    padding:0.31rem;
     border-radius: 0.3rem;
+    background-color:rgba(0, 0, 0, 0.87);
+    z-index:2;
 }
 
 .watch_later_popup{
     right:0.3rem;
-    top:0.3rem;
+    top:0.3rem; 
 }
 
 .add_playlist_popup{
@@ -135,6 +138,7 @@ body{
     padding:0.3rem;
     padding-left:0.4rem;
     padding-top:0.4rem;
+    
 }
 
 .dots_popup{
@@ -144,6 +148,7 @@ body{
     height:1rem;
 }
 
+
 .watch_later,
 .add_icon,
 .dots_img{
@@ -151,13 +156,69 @@ body{
     height:100%;
 }
 
-@media (max-width:660px){
+.watch_later_popup .background,
+.add_playlist_popup .background{
+    position:absolute;
+    inset:0;
+    border-radius: 0.3rem;
+    z-index:-1;
+    background-color: black;
+    opacity:0;
+    transition:opacity 250ms;
+}
+
+.watch_later_popup .hover_popup,
+.add_playlist_popup .hover_popup{
+    position:absolute;
+    display:flex;
+    white-space: nowrap;
+    top:0;
+    left:0;
+    font-size:0.8rem;
+    color:white;
+    background:black;
+    height:1.9rem;
+    align-items: center;
+    padding-left:0.4rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    z-index:-2;
+    opacity:0;
+    transition-delay:0.4s;
+    transition:transform 250ms,
+    opacity 250ms;
+}
+
+.add_playlist_popup .hover_popup{
+    left:1px;
+    padding-right:1px;
+}
+.watch_later_popup:hover .background,
+.watch_later_popup:hover .hover_popup,
+.add_playlist_popup:hover .background,
+.add_playlist_popup:hover .hover_popup{
+    opacity:1;
+    transition-delay:0.4s;
+} 
+
+.watch_later_popup:hover .background,
+.add_playlist_popup:hover .background{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.watch_later_popup:hover .hover_popup,
+.add_playlist_popup:hover .hover_popup{
+    transform: translateX(-100%);
+}
+
+@media (max-width:640px){
     .videos_container{
         grid-template-columns: 1fr 1fr;
     }  
 }
 
-@media (max-width:620px){
+@media (max-width:550px){
     .videos_container{
         grid-template-columns:1fr;
     }
